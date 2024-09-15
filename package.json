@@ -46,6 +46,12 @@
 					"default": 2,
 					"description": "Default fold level",
 					"scope": "resource"
+				},
+				"fold.enableAutoFold": {
+					"type": "boolean",
+					"default": true,
+					"description": "Enable auto fold",
+					"scope": "resource"
 				}
 			}
 		}

@@ -12,6 +12,11 @@ exports.activate = context => {
 
   const changedVisibleTextEditorsListener = vscode.window.onDidChangeVisibleTextEditors(
     editors => {
+      const configuration = vscode.workspace.getConfiguration('fold');
+      if (!configuration.get('enableAutoFold')) {
+        return;
+      }
+
       const activeTextEditor = vscode.window.activeTextEditor;
 
       if (editors.length !== 0 && activeTextEditor) {
