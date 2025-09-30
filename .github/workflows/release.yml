@@ -24,7 +24,7 @@ jobs:
           npm install
 
       - name: Package Extension
-        run: vsce package
+        run: npx vsce package
         # produces *.vsix
 
       - name: Create GitHub Release
